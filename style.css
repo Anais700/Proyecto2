@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tabla{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+    margin-top: 2%;
+}
+.tabla1{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    margin-top: 2%;
+}
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.video video{
+    border-radius: 3%;
+    box-shadow: 7px 13px 35px black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.cuerpoT tr td p{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.cuerpoT tr td img{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+} 
+.navbar div h6 a{
+    text-decoration: none;
+}
+.imgEqLocal {
+    height: 30px;
+    width: 30px;
+}
+.Equipos {
+    text-align: left !important;
+}
+.Equip {
+    text-align: left !important;
+}
+tr:hover{
+    scale: 1.05;
+}
+.escudos{
+    display: flex;
+}
+.imgLocal{
+    width: 30px;
+    height: 30px;
+}
+.busqueda{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    padding-top: 15px;
+}
+.busqueda div{
+    padding-right: 20px;
+}
+.results {
+    display: flex;
+    margin: auto;
+}
+.tabla2{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    margin-top: 2%;
+}
+.buscar{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.busquedas{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+    padding-top: 15px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+
+}
+.botones2{
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+}
+.botones2 .but1{
+    margin-right: 10%;
+}
+.alert{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+    margin-top: 15px;
+}
