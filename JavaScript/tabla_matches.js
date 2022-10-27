@@ -62,8 +62,8 @@
 // let fechaPartido = new Date (Matches.matches[0].utcDate)
 // console.log(fechaPartido.toLocaleString())
 
-let datosPartido = Matches.matches;
-console.log(datosPartido);
+// let datosPartido = Matches.matches;
+// console.log(datosPartido);
 
 quitarAlert1();
 quitarAlert2(); 
@@ -71,6 +71,50 @@ quitarAlert3();
 quitarAlert4();
 quitarAlert5();
 quitarAlert6();
+
+function getData() {
+    let spinner = document.getElementById("loader")
+    spinner.style.display = "block"
+
+    const url = "https://api.football-data.org/v2/competitions/2014/matches";
+    fetch(url, {
+      method: "GET",
+      headers: {
+        "X-Auth-Token": "d5b8d0d5ec5247d2b3e4a3c33edb3ca5",
+      },
+    })
+      .then((response) => {
+        if (response.ok) return response.json();
+
+      })
+      .then((data) => {
+        quitarSpinner()
+        let partidos = data.matches;
+        crearTabla(partidos);
+
+        let borrar = document.getElementById("reset")
+        borrar.addEventListener("click", () => {
+            resetFilter(partidos);
+            quitarAlert1()
+            quitarAlert2()
+            quitarAlert3()
+            quitarAlert4()
+            quitarAlert5()
+            quitarAlert6()
+        });
+    
+        let botonBusqueda = document.getElementById("botonBuscar")
+        botonBusqueda.addEventListener("click", () => {
+            filtrarEquipos(partidos);
+        });
+
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Has recargado demasiadas veces la página")
+      });
+  }
+  getData();
 
 // TABLA
 function crearTabla(results) {
@@ -126,7 +170,7 @@ function crearTabla(results) {
     }
 
 }
-crearTabla(datosPartido)
+// crearTabla(datosPartido)
 
 
 function filtrarEquipos(match) {
@@ -256,21 +300,7 @@ function filtrarEquipos(match) {
         }
         crearTabla(partidos)
     }
-    let borrar = document.getElementById("reset")
-    borrar.addEventListener("click", () => {
-        resetFilter(datosPartido);
-        quitarAlert1()
-        quitarAlert2()
-        quitarAlert3()
-        quitarAlert4()
-        quitarAlert5()
-        quitarAlert6()
-    })
 
-    let botonBusqueda = document.getElementById("botonBuscar")
-    botonBusqueda.addEventListener("click", () => {
-        filtrarEquipos(datosPartido);
-    });
 
     function quitarAlert1(){
         let alerta1 = document.getElementById("alert1")
@@ -296,6 +326,13 @@ function filtrarEquipos(match) {
         let alerta6 = document.getElementById("alert6")
         alerta6.style.display = "none"
     }
+
+    function quitarSpinner(){
+        let spinner = document.getElementById("loader")
+        spinner.style.display = "none"
+    }
+
+
             // function filtrarPartidos(matches)
             // let inputFiltro = document.querySelector("input[type=text]").value;
             // let radioBotones = document.querySelectorAll("input[type=radio]:checked")

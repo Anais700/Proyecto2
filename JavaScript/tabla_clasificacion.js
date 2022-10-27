@@ -41,32 +41,60 @@
 // console.log(puntos1)
 
 
-let datosClasificacion = classification.standings[0].table;
-console.log(datosClasificacion)
+// let datosClasificacion = classification.standings[0].table;
+// console.log(datosClasificacion)
 
-for (let i = 0; i < datosClasificacion.length; i++){
-    let team = datosClasificacion[i].team.name;
-console.log(team);
-    let posicion = datosClasificacion[i].position;
-console.log(posicion)
-    let pJugados = datosClasificacion[i].playedGames;
-console.log(pJugados)
-    let pGanados = datosClasificacion[i].won;
-console.log(pGanados)
-let pEmpatados = datosClasificacion[i].draw;
-console.log(pEmpatados)
-let pPerdidos = datosClasificacion[i].lost;
-console.log(pPerdidos)
-let golesAfavor = datosClasificacion[i].goalsFor;
-console.log(golesAfavor)
-let golesENcontra = datosClasificacion[i].goalsAgainst;
-console.log(golesENcontra)
-let diferenciaGoles = datosClasificacion[i].goalDifference;
-console.log(diferenciaGoles)
-let puntos = datosClasificacion[i].points;
-console.log(puntos)
+function getData() {
+    let spinner = document.getElementById("loader")
+    spinner.style.display = "block"
 
-};
+    const url = "https://api.football-data.org/v2/competitions/2014/standings";
+    fetch(url, {
+      method: "GET",
+      headers: {
+        "X-Auth-Token": "d5b8d0d5ec5247d2b3e4a3c33edb3ca5",
+      },
+    })
+      .then((response) => {
+        if (response.ok) return response.json();
+
+      })
+      .then((data) => {
+        quitarSpinner()
+        let classification = data.standings[0].table;
+        crearTabla(classification);
+
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Has recargado demasiadas veces la página")
+      });
+  }
+  getData();
+
+// for (let i = 0; i < datosClasificacion.length; i++){
+//     let team = datosClasificacion[i].team.name;
+// console.log(team);
+//     let posicion = datosClasificacion[i].position;
+// console.log(posicion)
+//     let pJugados = datosClasificacion[i].playedGames;
+// console.log(pJugados)
+//     let pGanados = datosClasificacion[i].won;
+// console.log(pGanados)
+// let pEmpatados = datosClasificacion[i].draw;
+// console.log(pEmpatados)
+// let pPerdidos = datosClasificacion[i].lost;
+// console.log(pPerdidos)
+// let golesAfavor = datosClasificacion[i].goalsFor;
+// console.log(golesAfavor)
+// let golesENcontra = datosClasificacion[i].goalsAgainst;
+// console.log(golesENcontra)
+// let diferenciaGoles = datosClasificacion[i].goalDifference;
+// console.log(diferenciaGoles)
+// let puntos = datosClasificacion[i].points;
+// console.log(puntos)
+
+// };
 
 function crearTabla(result){
     let tbody = document.getElementById("Table")
@@ -121,4 +149,8 @@ let datosT = [posicion, imgEq, equipo, PJ, PG, PE, PP,
 tbody.append(fila)    
     }
 }
-crearTabla(datosClasificacion)
+// crearTabla(datosClasificacion)
+function quitarSpinner(){
+    let spinner = document.getElementById("loader")
+    spinner.style.display = "none"
+}
