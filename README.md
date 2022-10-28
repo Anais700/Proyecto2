@@ -22,7 +22,7 @@ Para visualizar el proyecto...
 
 <h3>Tecnologías empleadas</h3>
 <p align="center">
- <img src="/Images/Html-JS-CSS-B.jpg" alt="Logo" width="290" height="105" class="img-fluid justify-content-center"></p>
+ <img src="/Images/Html-JS-CSS-B.jpg" alt="Logo" width="290" height="170" class="img-fluid justify-content-center"></p>
 
 - **HTML5 :** para el esqueleto de la página web.
 - **CSS3 :** para el diseño de la interfaz.
