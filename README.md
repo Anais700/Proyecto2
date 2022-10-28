@@ -21,6 +21,8 @@ Para visualizar el proyecto...
 
 
 <h3>Tecnologías empleadas</h3>
+<p align="center">
+ <img src="/Images/Html-JS-CSS-B.jpg" alt="Logo" width="290" height="105" class="img-fluid justify-content-center"></p>
 
 - **HTML5 :** para el esqueleto de la página web.
 - **CSS3 :** para el diseño de la interfaz.
@@ -33,34 +35,35 @@ Para visualizar el proyecto...
 <h3>Descripción técnica</h3>
 Se han usado dos tipos de funcionalidades : genéricas y específicas.
 
-Como funcionalidades genéricas tenemos las siguientes funciones: <getData(), crearTabla(), quitarAlert(), quitarSpinner()>
+Como funcionalidades genéricas tenemos las siguientes funciones: ```getData(), crearTabla(), quitarAlert(), quitarSpinner()```
 
-- getData() usada en todos los archivos JS, es la función encargada de coger los datos en tiempo real de la API, sin necesidad de usar el POSTMAN.
+- ```getData()``` usada en todos los archivos JS, es la función encargada de coger los datos en tiempo real de la API, sin necesidad de usar el POSTMAN.
 
-- crearTabla() es la función encargada de crear la tabla con los equipos, cada vez que queremos filtrarlos por nombre del equipo, o bien los resultados: ganados, empatados, perdidos o próximos partidos.
+- ```crearTabla()``` es la función encargada de crear la tabla con los equipos, cada vez que queremos filtrarlos por nombre del equipo, o bien los resultados: ganados, empatados, perdidos o próximos partidos.
 Interviene cada vez que es accionado alguno de los botones del filtro, pasándole un parámetro ú otro.
 
-- quitarAlert() usadas en el archivo JS de los resultados, tiene como función ocultar las alertas que aparecen en caso de no encontrar información o de estar mal escrito el equipo en el input.
+- ```quitarAlert()``` usadas en el archivo JS de los resultados, tiene como función ocultar las alertas que aparecen en caso de no encontrar información o de estar mal escrito el equipo en el input.
 
-- quitarSpinner() usada en todos los archivos JS, en los cuales se cogen datos con la API. Su función es de "parar/ocultar" el spinner después de recibir la respuesta de la API
+- ```quitarSpinner()``` usada en todos los archivos JS, en los cuales se cogen datos con la API. Su función es de "parar/ocultar" el spinner después de recibir la respuesta de la API
 
 
 Como funcionalidades específicas podemos encontrar las siguiente funciones :
 
-* filtrarEquipos() esta función tiene 2 tareas :
+- ```filtrarEquipos()``` esta función tiene 2 tareas :
 
-- filtrar los equipos por nombre con los datos introducidos en el input por el usuario
-- volver hacer otro filtro de la nueva array creada con los nombres del equipo en función de su resultado
+* filtrar los equipos por nombre con los datos introducidos en el input por el usuario
+* volver hacer otro filtro de la nueva array creada con los nombres del equipo en función de su resultado
 
-* resetFilter() usada para resetear todos los filtros, limpiando el campo donde el usuario introduce el nombre de su equipo.
+- ```resetFilter()``` usada para resetear todos los filtros, limpiando el campo donde el usuario introduce el nombre de su equipo.
 Esta función se usa también en el caso de que alguna de las condiciones no se cumplan y al usuario le salta alguna alerta.
 
 
 <h3>Versiones</h3>
-v1.0 (27.10.2022) - Presentación proyecto
+v1.0 (28.10.2022) - Presentación proyecto
 
 
 <h3>TO-DO</h3>
-<p>* Mejora de diseño</p>
-<p>* Tabla con información de los jugadores de cada equipo y filtro de búsqueda</p>
-<p>* Filtrar resultados por jornada</p>
+<p>- Mejora de diseño</p>
+<p>- Tabla con información de los jugadores de cada equipo y filtro de búsqueda</p>
+<p>- Filtrar resultados por jornada</p>
+<p>- Tabla de estadísticas</p>
