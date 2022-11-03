@@ -1,14 +1,12 @@
 # Proyecto 2: Bootcamp Camsite Academy
 <p align="center">
- <img src="/Images/LaLiga.svg.png" alt="Logo" width="290" height="105" class="img-fluid justify-content-center"></p>
+ <img src="/Images/LaLiga.svg.png" alt="Logo" width="300" height="105" class="img-fluid justify-content-center"></p>
 <h2>LaLiga Web</h2>
 <h3>Descripción</h3>          
 <p>LaLiga Web es un proyecto que consiste en un Sitio Web donde el usuario puede acceder a una variedad de datos recopilados sobre LaLiga Santander: competición de clubes de fútbol de España, cuyo nombre oficial es "Campeonato Nacional de Liga de Primera División".</p>
 Ofrece el acceso a: la clasificación, los resultados, información sobre cada equipo y los próximos partidos más importantes ⚽ .
 
 Permite al usuario el acceso a la página web oficial de LaLiga, a sus redes sociales oficiales y a las páginas web de los distintos equipos que conforman esta competición.
-
-Para visualizar el proyecto...
 
 
 <h3>Funcionalidades</h3>
@@ -22,7 +20,7 @@ Para visualizar el proyecto...
 
 <h3>Tecnologías empleadas</h3>
 <p align="center">
- <img src="/Images/Html-JS-CSS-B.jpg" alt="Logo" width="290" height="170" class="img-fluid justify-content-center"></p>
+ <img src="/Images/Html-JS-CSS-B.jpg" alt="Logo" width="290" height="200" class="img-fluid justify-content-center"></p>
 
 - **HTML5 :** para el esqueleto de la página web.
 - **CSS3 :** para el diseño de la interfaz.
