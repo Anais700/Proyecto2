@@ -17,7 +17,7 @@ Para visualizar el proyecto...
 
 - Acceso a la clasificación general de los equipos de LaLiga, donde el usuario podrá visualizar en cualquier momento qué puesto ocupa su equipo.
 
-- Acceso a los resultados de todos los partidos de LaLiga Santander. El usuario puede filtrar los resultados en función del equipo que le interese, así como en función del resultado del mismo : ganados, empatados, perdidos o próximos partidos.
+- Acceso a los resultados de todos los partidos de LaLiga Santander. El usuario puede filtrar los resultados en función del equipo que le interese, así como en función del resultado del mismo: ganados, empatados, perdidos o próximos partidos.
 
 
 <h3>Tecnologías empleadas</h3>
@@ -51,8 +51,8 @@ Como funcionalidades específicas podemos encontrar las siguiente funciones :
 
 - ```filtrarEquipos()``` esta función tiene 2 tareas :
 
-* filtrar los equipos por nombre con los datos introducidos en el input por el usuario
-* volver hacer otro filtro de la nueva array creada con los nombres del equipo en función de su resultado
+    * filtrar los equipos por nombre con los datos introducidos en el input por el usuario
+    * volver hacer otro filtro de la nueva array creada con los nombres del equipo en función de su resultado
 
 - ```resetFilter()``` usada para resetear todos los filtros, limpiando el campo donde el usuario introduce el nombre de su equipo.
 Esta función se usa también en el caso de que alguna de las condiciones no se cumplan y al usuario le salta alguna alerta.
