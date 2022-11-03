@@ -51,11 +51,13 @@ body{
     text-align: left !important;
 }
 tr:hover{
-    scale: 1.05;
+    background-color: darkslategrey;
+    color:royalblue;
+    scale: 1.01;
 }
-.escudos{
+/* .escudos{
     display: flex;
-}
+} */
 .imgLocal{
     width: 30px;
     height: 30px;

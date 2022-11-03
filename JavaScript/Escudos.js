@@ -28,8 +28,7 @@ function imagenesC(img) {
     let ImgLogo = document.getElementById("escudos");
   
     for (let i = 0; i < img.length; i++) {
-      let div = document.createElement("div");
-  
+        
       let logoEquipo = document.createElement("img");
       logoEquipo.classList.add("imgLocal");
       logoEquipo.setAttribute("src", img[i].crestUrl);
@@ -38,8 +37,8 @@ function imagenesC(img) {
       enlace.setAttribute("href", img[i].website);
   
       enlace.append(logoEquipo);
-      div.append(enlace);
-      ImgLogo.append(div);
+  
+      ImgLogo.append(enlace);
     }
   }
   // imagenesC(escudos);
